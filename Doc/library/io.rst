@@ -868,7 +868,8 @@ Text I/O
                          line_buffering=False, write_through=False)
 
    A buffered text stream over a :class:`BufferedIOBase` binary stream.
-   It inherits :class:`TextIOBase`.
+   It inherits :class:`TextIOBase` and will if it get closed also close the
+   wrapped buffer.
 
    *encoding* gives the name of the encoding that the stream will be decoded or
    encoded with.  It defaults to
